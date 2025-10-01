@@ -1,0 +1,25 @@
+---
+title: "Lab 5"
+Name: Saheedat Olasumbo Abbas
+Date: October 1st, 2025
+---
+
+```{r}
+setwd("C:/Users/warms/OneDrive/Desktop/MSDTI/Data_Mining/")
+
+# Load iris dataset
+data(iris)
+
+# Build linear model
+model <- lm(Petal.Length ~ Sepal.Length, data = iris)
+
+# Model summary
+summary(model)
+
+# Plot with regression line
+plot(iris$Sepal.Length, iris$Petal.Length,
+     main = "Linear Regression: Petal.Length vs Sepal.Length",
+     xlab = "Sepal Length", ylab = "Petal Length", pch = 19, col = "blue")
+abline(model, col = "red", lwd = 2)
+
+```
